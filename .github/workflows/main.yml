@@ -1,0 +1,88 @@
+name: Build Quality Escalator Estimator
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    name: Windows EXE
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check project
+        shell: pwsh
+        run: |
+          Write-Host "Working directory: $PWD"
+          Get-ChildItem -Force
+          if (!(Test-Path package.json)) {
+            throw "package.json was not found at repository root."
+          }
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Windows app
+        run: npx electron-builder --win
+
+      - name: Upload Windows build
+        uses: actions/upload-artifact@v4
+        with:
+          name: quality-escalator-estimator-windows
+          path: dist/*
+          if-no-files-found: error
+
+  android:
+    name: Android APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check project
+        run: |
+          pwd
+          ls -la
+          test -f package.json || exit 1
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Setup Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Add Android platform
+        run: npx cap add android
+
+      - name: Sync Android project
+        run: npx cap sync android
+
+      - name: Build Android APK
+        working-directory: android
+        run: ./gradlew assembleDebug
+
+      - name: Upload Android APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: quality-escalator-estimator-android-debug
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
