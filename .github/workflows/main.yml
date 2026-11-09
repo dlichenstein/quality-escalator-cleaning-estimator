@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: quality-escalator-estimator-windows
-          path: dist/*
+          path: Quality-Escalator-Cleaning-Estimator-Setup.exe
           if-no-files-found: error
 
   android:
