@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#17365d">
+<meta name="description" content="Quality Cleaning Equipment & Supply escalator cleaning estimator">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2317365d'/%3E%3Cpath d='M16 46h32M20 38h24M24 30h16M28 22h8' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<title>Quality Escalator Cleaning Estimator</title>
+<style>
+:root{--navy:#17365d;--blue:#2563eb;--bg:#f4f6f8;--card:#fff;--text:#17212b;--muted:#64748b;--line:#d9e0e7;--green:#16794a;--danger:#b42318;--shadow:0 2px 10px rgba(15,23,42,.08)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;font-size:15px}button,input,select,textarea{font:inherit}button{cursor:pointer}
+.app{min-height:100vh}.topbar{background:var(--navy);color:#fff;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px;position:sticky;top:0;z-index:10}.brand{font-weight:700;font-size:18px}.brand small{display:block;font-weight:400;font-size:12px;opacity:.8;margin-top:2px}.top-actions{display:flex;gap:8px;flex-wrap:wrap}.top-actions button{background:transparent;border:1px solid rgba(255,255,255,.35);color:#fff;padding:8px 12px;border-radius:7px}.top-actions button:hover{background:rgba(255,255,255,.1)}
+.container{max-width:1500px;margin:0 auto;padding:22px}.grid{display:grid;grid-template-columns:1.05fr 1.25fr .95fr;gap:18px;align-items:start}.card{background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);overflow:hidden}.card-head{padding:13px 16px;background:#eef2f6;border-bottom:1px solid var(--line);font-weight:700;color:#203040;letter-spacing:.02em}.card-body{padding:16px}.section{margin-bottom:18px}.section:last-child{margin-bottom:0}.section-title{font-size:12px;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:10px;letter-spacing:.06em}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field label{display:block;font-size:12px;font-weight:700;color:#465465;margin-bottom:5px}.field input,.field select,.field textarea{width:100%;border:1px solid #bfc9d4;border-radius:6px;padding:9px 10px;background:#fff;min-height:40px}.field textarea{min-height:82px;resize:vertical}.full{grid-column:1/-1}.check-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.check{display:flex;align-items:center;gap:8px;padding:8px 9px;border:1px solid var(--line);border-radius:6px;background:#fafbfc}.check input{width:17px;height:17px}
+.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}.btn{border:1px solid #b8c3cf;background:#fff;color:#243447;border-radius:7px;padding:9px 13px;font-weight:700}.btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}.btn.success{background:var(--green);border-color:var(--green);color:#fff}.btn.danger{color:var(--danger);border-color:#efb0aa}.btn.small{padding:6px 9px;font-size:12px}.btn:disabled{opacity:.5;cursor:not-allowed}
+.result{display:grid;gap:9px}.metric{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid #edf0f2;padding:7px 0}.metric:last-child{border-bottom:0}.metric span:first-child{color:var(--muted)}.metric strong{font-variant-numeric:tabular-nums}.price-box{margin-top:12px;border:2px solid #b9d4c6;border-radius:9px;padding:14px;background:#f6fbf8}.price-box .label{font-size:12px;color:var(--muted);font-weight:800;text-transform:uppercase}.price-box .price{font-size:30px;font-weight:800;color:var(--green);margin-top:2px}
+.summary-table{width:100%;border-collapse:collapse;font-size:12px}.summary-table th,.summary-table td{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}.summary-table th{font-size:11px;color:var(--muted);text-transform:uppercase}.summary-table td.num,.summary-table th.num{text-align:right}.empty{color:var(--muted);padding:25px 10px;text-align:center;border:1px dashed var(--line);border-radius:7px}.totals{margin-top:14px;border-top:2px solid #d7dee5;padding-top:10px}.total-line{display:flex;justify-content:space-between;padding:4px 0}.grand{font-size:20px;font-weight:800;margin-top:5px}.notice{font-size:12px;color:#5f6b78;background:#f7f8fa;border-left:3px solid #aeb8c3;padding:9px 10px;margin-top:14px}
+.modal{position:fixed;inset:0;background:rgba(15,23,42,.55);display:none;align-items:center;justify-content:center;padding:20px;z-index:50}.modal.open{display:flex}.modal-card{width:min(850px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:10px;box-shadow:0 15px 50px rgba(0,0,0,.25)}.modal-head{padding:15px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.modal-body{padding:18px}.settings-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.help{color:var(--muted);font-size:12px}.toast{position:fixed;right:20px;bottom:20px;background:#17212b;color:#fff;padding:11px 14px;border-radius:7px;display:none;z-index:80}.toast.show{display:block}
+@media(max-width:1050px){.grid{grid-template-columns:1fr 1fr}.summary{grid-column:1/-1}}@media(max-width:700px){.topbar{position:static;padding:12px 14px;align-items:flex-start}.container{padding:12px}.grid{grid-template-columns:1fr}.summary{grid-column:auto}.form-grid,.settings-grid{grid-template-columns:1fr}.check-grid{grid-template-columns:1fr}.top-actions{justify-content:flex-end}.brand{font-size:16px}.summary-table{font-size:11px}.summary-table th:nth-child(3),.summary-table td:nth-child(3){display:none}}
+@media print{body{background:#fff}.topbar,.no-print{display:none!important}.container{max-width:none;padding:0}.card{box-shadow:none;border:0}.grid{display:block}.entry,.result-card,.summary-card{display:none}.print-report{display:block!important}.modal{display:none!important}}
+.print-report{display:none;padding:35px;color:#111}.report-header{display:flex;justify-content:space-between;border-bottom:2px solid #17365d;padding-bottom:12px;margin-bottom:20px}.report-title{font-size:24px;font-weight:800;color:#17365d}.report-table{width:100%;border-collapse:collapse;margin-top:18px}.report-table th,.report-table td{border:1px solid #cfd6dd;padding:8px}.report-table th{background:#eef2f6}.report-total{margin-left:auto;width:320px;margin-top:18px}.report-note{margin-top:25px;font-size:11px;color:#555}
+</style></head>
+<body>
+<div class="app">
+<header class="topbar">
+<div class="brand">QUALITY ESCALATOR CLEANING ESTIMATOR<small>Quality Cleaning Equipment &amp; Supply</small></div>
+<div class="top-actions no-print"><button onclick="newEstimate()">New</button><button onclick="saveJob()">Save</button><button onclick="loadJob()">Load</button><button onclick="openSettings()">Settings</button><button onclick="printEstimate()">Estimate / Print</button></div>
+</header>
+<main class="container">
+<div class="grid">
+<section class="card entry">
+<div class="card-head">JOB INFORMATION</div><div class="card-body">
+<div class="form-grid">
+<div class="field"><label>Customer</label><input id="customer" placeholder="Customer name"></div>
+<div class="field"><label>Estimate #</label><input id="estimateNo" readonly></div>
+<div class="field"><label>Job / Project</label><input id="jobName" placeholder="Escalator cleaning project"></div>
+<div class="field"><label>Location</label><input id="location" placeholder="Facility / city"></div>
+<div class="field"><label>Estimator</label><input id="estimator" placeholder="Your name"></div>
+<div class="field"><label>Date</label><input id="date" type="date"></div>
+<div class="field full"><label>Customer notes / scope</label><textarea id="notes" placeholder="Optional notes that can appear on the estimate"></textarea></div>
+</div></div></section>
+
+<section class="card entry">
+<div class="card-head">ESCALATOR INPUT</div><div class="card-body">
+<div class="section"><div class="section-title">Escalator characteristics</div><div class="form-grid">
+<div class="field"><label>Step count</label><input id="steps" type="number" min="1" value="50"></div>
+<div class="field"><label>Step width (in)</label><input id="stepWidth" type="number" min="1" step="0.1" value="32"></div>
+<div class="field"><label>Cleaning type</label><select id="cleaning"><option>Maintenance</option><option selected>Standard</option><option>Deep</option></select></div>
+<div class="field"><label>Soil level</label><select id="soil"><option>Light</option><option selected>Normal</option><option>Heavy</option><option>Extreme</option></select></div>
+<div class="field"><label>Crew size</label><input id="crew" type="number" min="1" max="10" value="1"></div>
+</div></div>
+<div class="section"><div class="section-title">Additional work</div><div class="check-grid">
+<label class="check"><input id="handrails" type="checkbox"> Handrails</label>
+<label class="check"><input id="comb" type="checkbox"> Comb plates</label>
+<label class="check"><input id="risers" type="checkbox"> Risers</label>
+<label class="check"><input id="skirts" type="checkbox"> Skirts / side panels</label>
+<label class="check"><input id="detail" type="checkbox"> Extra detail</label>
+</div></div>
+<div class="actions"><button class="btn primary" onclick="calculateCurrent()">Calculate</button><button class="btn success" onclick="addEscalator()">Add Escalator</button><button class="btn" onclick="clearCurrent()">Clear</button></div>
+<div class="notice">The estimator uses editable production and pricing assumptions. Calibrate these settings to Quality's actual field production times.</div>
+</div></section>
+
+<section class="card result-card entry">
+<div class="card-head">CURRENT ESCALATOR RESULT</div><div class="card-body">
+<div id="currentResult" class="result"><div class="empty">Enter the escalator information and select Calculate.</div></div>
+</div></section>
+
+<section class="card summary-card summary">
+<div class="card-head">JOB SUMMARY</div><div class="card-body">
+<div id="summaryTable"><div class="empty">No escalators added yet.</div></div>
+<div id="totals" class="totals" style="display:none"></div>
+<div class="actions no-print"><button class="btn primary" onclick="printEstimate()">Generate Estimate</button><button class="btn" onclick="exportJob()">Export Job File</button></div>
+</div></section>
+</div>
+</main>
+<div id="settingsModal" class="modal no-print"><div class="modal-card"><div class="modal-head"><strong>Estimator Settings</strong><button class="btn small" onclick="closeSettings()">Close</button></div><div class="modal-body">
+<div class="settings-grid">
+<div class="field"><label>BR 52/11 working width (in)</label><input id="s_machineWidth" type="number" step="0.1"></div>
+<div class="field"><label>Coverage efficiency (%)</label><input id="s_coverage" type="number" min="1" max="100" step="1"></div>
+<div class="field"><label>Maintenance production (step-width passes/hr)</label><input id="s_maintRate" type="number" min="1"></div>
+<div class="field"><label>Standard production (step-width passes/hr)</label><input id="s_stdRate" type="number" min="1"></div>
+<div class="field"><label>Deep production (step-width passes/hr)</label><input id="s_deepRate" type="number" min="1"></div>
+<div class="field"><label>Setup / breakdown (hr)</label><input id="s_setup" type="number" min="0" step="0.01"></div>
+<div class="field"><label>Base detail (hr)</label><input id="s_detail" type="number" min="0" step="0.01"></div>
+<div class="field"><label>Handrails allowance (hr)</label><input id="s_handrails" type="number" min="0" step="0.01"></div>
+<div class="field"><label>Comb plates allowance (hr)</label><input id="s_comb" type="number" min="0" step="0.01"></div>
+<div class="field"><label>Risers allowance (hr)</label><input id="s_risers" type="number" min="0" step="0.01"></div>
+<div class="field"><label>Skirts / side panels allowance (hr)</label><input id="s_skirts" type="number" min="0" step="0.01"></div>
+<div class="field"><label>Extra detail allowance (hr)</label><input id="s_extra" type="number" min="0" step="0.01"></div>
+<div class="field"><label>Heavy soil multiplier</label><input id="s_heavy" type="number" min="0" step="0.01"></div>
+<div class="field"><label>Extreme soil multiplier</label><input id="s_extreme" type="number" min="0" step="0.01"></div>
+<div class="field"><label>Billable labor rate ($/labor hr)</label><input id="s_rate" type="number" min="0" step="0.01"></div>
+<div class="field"><label>Consumables ($/escalator)</label><input id="s_consumables" type="number" min="0" step="0.01"></div>
+<div class="field"><label>Travel ($/job)</label><input id="s_travel" type="number" min="0" step="0.01"></div>
+<div class="field"><label>After-hours markup (%)</label><input id="s_after" type="number" min="0" step="0.1"></div>
+<div class="field"><label>Minimum job charge ($)</label><input id="s_minimum" type="number" min="0" step="0.01"></div>
+</div>
+<p class="help">These are starting assumptions, not guaranteed production standards. Change them to match Quality's actual costs, rates, and field results.</p>
+<div class="actions"><button class="btn primary" onclick="saveSettings()">Save Settings</button><button class="btn" onclick="resetSettings()">Reset Defaults</button></div>
+</div></div></div>
+<div id="toast" class="toast"></div>
+<section class="print-report" id="printReport"></section>
+</div>
+<script>
+const DEFAULTS={machineWidth:20.5,coverage:85,maintRate:500,stdRate:400,deepRate:300,setup:.20,detail:.15,handrails:.15,comb:.15,risers:.15,skirts:.15,extra:.15,heavy:1.25,extreme:1.50,rate:125,consumables:25,travel:75,after:15,minimum:350};
+let settings=JSON.parse(localStorage.getItem('qce_settings')||'null')||{...DEFAULTS};let escalators=[];let currentCalc=null;
+const $=id=>document.getElementById(id);const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:'USD'}).format(Number(n)||0);const num=n=>Number(n||0).toFixed(2);
+function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
+function estimateNumber(){const d=new Date();return `QE-${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}${String(d.getDate()).padStart(2,'0')}-${Math.floor(100+Math.random()*900)}`}
+function init(){ $('estimateNo').value=estimateNumber();$('date').value=new Date().toISOString().slice(0,10);loadSettingsForm();}
+function rateFor(cleaning){return cleaning==='Maintenance'?settings.maintRate:cleaning==='Deep'?settings.deepRate:settings.stdRate}
+function soilMultiplier(soil){return soil==='Heavy'?settings.heavy:soil==='Extreme'?settings.extreme:1}
+function readCurrent(){return {steps:Number($('steps').value),stepWidth:Number($('stepWidth').value),cleaning:$('cleaning').value,soil:$('soil').value,crew:Math.max(1,Number($('crew').value)||1),handrails:$('handrails').checked,comb:$('comb').checked,risers:$('risers').checked,skirts:$('skirts').checked,detail:$('detail').checked}}
+function calculate(data){const effectiveWidth=settings.machineWidth*(settings.coverage/100);const passes=Math.max(1,Math.ceil(data.stepWidth/effectiveWidth));const stepWidthPasses=data.steps*passes;const baseMachine=stepWidthPasses/rateFor(data.cleaning);const machineHours=baseMachine*soilMultiplier(data.soil);let detail=settings.setup+settings.detail;if(data.handrails)detail+=settings.handrails;if(data.comb)detail+=settings.comb;if(data.risers)detail+=settings.risers;if(data.skirts)detail+=settings.skirts;if(data.detail)detail+=settings.extra;const elapsed=Math.max(0,machineHours+detail);const laborHours=elapsed*data.crew;const laborPrice=laborHours*settings.rate;const subtotal=laborPrice+settings.consumables;return {...data,effectiveWidth,passes,stepWidthPasses,machineHours,detailHours:detail,elapsedHours:elapsed,laborHours,laborPrice,consumables:settings.consumables,subtotal}}
+function renderCurrent(c){currentCalc=c;$('currentResult').innerHTML=`<div class="metric"><span>Effective machine width</span><strong>${num(c.effectiveWidth)} in</strong></div><div class="metric"><span>Required passes</span><strong>${c.passes}</strong></div><div class="metric"><span>Step-width passes</span><strong>${c.stepWidthPasses}</strong></div><div class="metric"><span>Machine cleaning time</span><strong>${num(c.machineHours)} hr</strong></div><div class="metric"><span>Setup / detail time</span><strong>${num(c.detailHours)} hr</strong></div><div class="metric"><span>Estimated elapsed time</span><strong>${formatHours(c.elapsedHours)}</strong></div><div class="metric"><span>Crew labor-hours</span><strong>${num(c.laborHours)} hr</strong></div><div class="metric"><span>Labor price</span><strong>${money(c.laborPrice)}</strong></div><div class="metric"><span>Consumables</span><strong>${money(c.consumables)}</strong></div><div class="price-box"><div class="label">Estimated escalator price</div><div class="price">${money(c.subtotal)}</div></div>`}
+function formatHours(h){const hrs=Math.floor(h);const mins=Math.round((h-hrs)*60);return `${hrs} hr ${mins} min`}
+function calculateCurrent(){const d=readCurrent();if(!d.steps||!d.stepWidth){toast('Enter step count and step width.');return}renderCurrent(calculate(d))}
+function addEscalator(){if(!currentCalc)calculateCurrent();if(!currentCalc)return;escalators.push({...currentCalc,id:Date.now()});renderSummary();toast(`Escalator #${escalators.length} added.`)}
+function renderSummary(){if(!escalators.length){$('summaryTable').innerHTML='<div class="empty">No escalators added yet.</div>';$('totals').style.display='none';return}let rows=escalators.map((e,i)=>`<tr><td>#${i+1}</td><td>${e.steps}</td><td>${num(e.stepWidth)}"</td><td class="num">${e.passes}</td><td class="num">${num(e.laborHours)}</td><td class="num">${money(e.subtotal)}</td><td class="num no-print"><button class="btn small" onclick="editEsc(${i})">Edit</button> <button class="btn small danger" onclick="removeEsc(${i})">Remove</button></td></tr>`).join('');$('summaryTable').innerHTML=`<div style="overflow:auto"><table class="summary-table"><thead><tr><th>Esc.</th><th>Steps</th><th>Width</th><th class="num">Passes</th><th class="num">Labor hrs</th><th class="num">Price</th><th class="num no-print">Actions</th></tr></thead><tbody>${rows}</tbody></table></div>`;const labor=escalators.reduce((s,e)=>s+e.laborHours,0),sub=escalators.reduce((s,e)=>s+e.subtotal,0),after=$('after-hours').checked?sub*settings.after/100:0,total=Math.max(settings.minimum,sub+settings.travel+after);$('totals').style.display='block';$('totals').innerHTML=`<div class="total-line"><span>Labor hours</span><strong>${num(labor)} hr</strong></div><div class="total-line"><span>Escalator subtotal</span><strong>${money(sub)}</strong></div><div class="total-line"><span>Travel</span><strong>${money(settings.travel)}</strong></div><div class="total-line"><span>After-hours markup</span><strong>${money(after)}</strong></div><div class="total-line"><span>Minimum job charge</span><strong>${money(settings.minimum)}</strong></div><div class="total-line grand"><span>Recommended job price</span><strong>${money(total)}</strong></div>`}
+function editEsc(i){const e=escalators[i];$('steps').value=e.steps;$('stepWidth').value=e.stepWidth;$('cleaning').value=e.cleaning;$('soil').value=e.soil;$('crew').value=e.crew;$('handrails').checked=e.handrails;$('comb').checked=e.comb;$('risers').checked=e.risers;$('skirts').checked=e.skirts;$('detail').checked=e.detail;escalators.splice(i,1);renderCurrent(e);renderSummary();window.scrollTo({top:0,behavior:'smooth'})}
+function removeEsc(i){if(confirm(`Remove escalator #${i+1}?`)){escalators.splice(i,1);renderSummary()}}
+function clearCurrent(){['steps','stepWidth'].forEach(id=>$(id).value='');$('cleaning').value='Standard';$('soil').value='Normal';$('crew').value=1;['handrails','comb','risers','skirts','detail'].forEach(id=>$(id).checked=false);currentCalc=null;$('currentResult').innerHTML='<div class="empty">Enter the escalator information and select Calculate.</div>'}
+function newEstimate(){if(!confirm('Start a new estimate? Unsaved changes will be cleared.'))return;location.reload()}
+function openSettings(){loadSettingsForm();$('settingsModal').classList.add('open')}
+function closeSettings(){$('settingsModal').classList.remove('open')}
+const settingIds=['machineWidth','coverage','maintRate','stdRate','deepRate','setup','detail','handrails','comb','risers','skirts','extra','heavy','extreme','rate','consumables','travel','after','minimum'];function loadSettingsForm(){settingIds.forEach(k=>{const el=$('s_'+k);if(el)el.value=settings[k]})}
+function saveSettings(){settingIds.forEach(k=>{settings[k]=Number($('s_'+k).value)||0});localStorage.setItem('qce_settings',JSON.stringify(settings));closeSettings();if(currentCalc)calculateCurrent();renderSummary();toast('Settings saved.')}
+function resetSettings(){if(!confirm('Reset all estimator settings to defaults?'))return;settings={...DEFAULTS};localStorage.setItem('qce_settings',JSON.stringify(settings));loadSettingsForm();toast('Defaults restored. Click Save Settings to apply them.')}
+function jobData(){return {version:1,settings,job:{customer:$('customer').value,estimateNo:$('estimateNo').value,jobName:$('jobName').value,location:$('location').value,estimator:$('estimator').value,date:$('date').value,notes:$('notes').value,afterHours:$('after-hours').checked},escalators}}
+function saveJob(){const blob=new Blob([JSON.stringify(jobData(),null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`${$('estimateNo').value||'estimate'}.json`;a.click();URL.revokeObjectURL(a.href);toast('Job file saved.')}
+function loadJob(){const input=document.createElement('input');input.type='file';input.accept='.json,application/json';input.onchange=async()=>{const file=input.files[0];if(!file)return;try{const d=JSON.parse(await file.text());settings={...DEFAULTS,...(d.settings||{})};localStorage.setItem('qce_settings',JSON.stringify(settings));const j=d.job||{};['customer','estimateNo','jobName','location','estimator','date','notes'].forEach(k=>$(k).value=j[k]||'');$('after-hours').checked=!!j.afterHours;escalators=d.escalators||[];renderSummary();loadSettingsForm();toast('Job loaded.')}catch(e){alert('Could not load this job file.')}};input.click()}
+function exportJob(){saveJob()}
+function printEstimate(){if(!escalators.length){toast('Add at least one escalator before generating an estimate.');return}buildReport();window.print()}
+function buildReport(){const customer=$('customer').value||'Customer';const sub=escalators.reduce((s,e)=>s+e.subtotal,0);const after=$('after-hours').checked?sub*settings.after/100:0;const total=Math.max(settings.minimum,sub+settings.travel+after);$('printReport').innerHTML=`<div class="report-header"><div><div class="report-title">QUALITY CLEANING EQUIPMENT &amp; SUPPLY</div><div>Escalator Cleaning Estimate</div></div><div style="text-align:right"><strong>${$('estimateNo').value}</strong><br>${$('date').value}</div></div><div><strong>Customer:</strong> ${esc(customer)}<br><strong>Job:</strong> ${esc($('jobName').value)}<br><strong>Location:</strong> ${esc($('location').value)}<br><strong>Estimator:</strong> ${esc($('estimator').value)}</div><table class="report-table"><thead><tr><th>Escalator</th><th>Steps</th><th>Width</th><th>Cleaning</th><th>Scope</th><th>Price</th></tr></thead><tbody>${escalators.map((e,i)=>`<tr><td>#${i+1}</td><td>${e.steps}</td><td>${num(e.stepWidth)} in</td><td>${esc(e.cleaning)}</td><td>${scope(e)}</td><td>${money(e.subtotal)}</td></tr>`).join('')}</tbody></table><div class="report-total"><div class="total-line"><span>Escalator services</span><strong>${money(sub)}</strong></div><div class="total-line"><span>Travel</span><strong>${money(settings.travel)}</strong></div><div class="total-line"><span>After-hours</span><strong>${money(after)}</strong></div><div class="total-line grand"><span>Total Estimate</span><strong>${money(total)}</strong></div></div>${$('notes').value?`<div style="margin-top:25px"><strong>Notes:</strong><br>${esc($('notes').value).replace(/\n/g,'<br>')}</div>`:''}<div class="report-note">This estimate is based on the information provided and the production/pricing assumptions configured in the estimator. Site conditions, access, equipment condition, and requested scope may affect actual service time. Additional work outside the stated scope may require authorization.</div>`}
+function scope(e){const a=[e.cleaning+' cleaning'];if(e.handrails)a.push('handrails');if(e.comb)a.push('comb plates');if(e.risers)a.push('risers');if(e.skirts)a.push('skirts/side panels');if(e.detail)a.push('extra detail');return a.join(', ')}function esc(s){return String(s||'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+$('after-hours')?.addEventListener('change',renderSummary);document.addEventListener('DOMContentLoaded',init);if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+</script>
+</body></html>

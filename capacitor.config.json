@@ -1,0 +1,7 @@
+{
+  "appId": "com.qualitycleaning.escalator.estimator",
+  "appName": "Quality Escalator Cleaning Estimator",
+  "webDir": ".",
+  "bundledWebRuntime": false,
+  "server": { "androidScheme": "https" }
+}
